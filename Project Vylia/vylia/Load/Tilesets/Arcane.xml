@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tileset>
+  <Name>Arcane</Name>
+  <Width>8</Width>
+  <Height>45</Height>
+  <TileSize>32</TileSize>
+  <File>Tilesets/magecity_0.png</File>
+  <Tiles>
+    <Tile>
+      <Id>0</Id>
+      <TexturePosition>
+        <X>0</X>
+        <Y>8</Y>
+      </TexturePosition>
+      <Name>Void</Name>
+      <TileTypeName>Void</TileTypeName>
+    </Tile>
+  </Tiles>
+</Tileset>

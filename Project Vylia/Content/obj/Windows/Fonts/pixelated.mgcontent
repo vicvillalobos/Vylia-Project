@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>F:/Project Vylia/Project Vylia/Content/Fonts/pixelated.fnt</SourceFile>
+  <SourceTime>2016-08-12T17:28:35.9927793-03:00</SourceTime>
+  <DestFile>F:/Project Vylia/Project Vylia/Content/bin/Windows/Fonts/pixelated.xnb</DestFile>
+  <DestTime>2016-08-26T13:35:46.9297014-03:00</DestTime>
+  <Importer>BitmapFontImporter</Importer>
+  <ImporterTime>2016-04-08T12:54:30-03:00</ImporterTime>
+  <Processor>BitmapFontProcessor</Processor>
+  <ProcessorTime>2016-04-08T12:54:30-03:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

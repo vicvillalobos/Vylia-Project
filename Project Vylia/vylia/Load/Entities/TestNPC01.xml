@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Actor>
+  <Name>NPC Test 1</Name>
+  <Dimensions>
+    <X>32</X>
+    <Y>48</Y>
+  </Dimensions>
+  <GridPosition>
+    <X>9</X>
+    <Y>19</Y>
+  </GridPosition>
+  <DefaultFacing>POSITION_DOWN</DefaultFacing>
+  <BaseSpeed>
+    <X>1</X>
+    <Y>1</Y>
+  </BaseSpeed>
+  <TextureURL>sprites/f_actor1</TextureURL>
+  
+  <ActorConversation type="Root">
+    <ConversationList>
+      <ConversationNode type="Text">
+        <Text>:#ff0000#:Hola:#ffffff#: Mundo!</Text>
+      </ConversationNode>
+      <ConversationNode type="Text">
+        <Text>Texto de prueba</Text>
+      </ConversationNode>
+      <ConversationNode type="Text">
+        <Text>Lorem ipsum :#ff0000#:dolor:#ffffff#: sit amet, :#0000ff#:consectetur adipiscing elit:#ffffff#:. Duis posuere eget metus malesuada tempus. Vestibulum accumsan ex eu interdum auctor. :#00ff00#:Vestibulum:#ffffff#: orci turpis, sodales rutrum magna in, dictum ultrices turpis. Aliquam faucibus, lectus et laoreet sagittis, metus eros pharetra sem, id ornare ipsum arcu sed leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam sed sapien vel sem blandit accumsan.</Text>
+      </ConversationNode>
+      <ConversationNode type="Text">
+        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere eget metus malesuada tempus. Vestibulum accumsan ex eu interdum auctor. Vestibulum orci turpis, sodales rutrum magna in, dictum ultrices turpis. Aliquam faucibus, lectus et laoreet sagittis, metus eros pharetra sem, id ornare ipsum arcu sed leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam sed sapien vel sem blandit accumsan.</Text>
+      </ConversationNode>
+    </ConversationList>
+  </ActorConversation>
+</Actor>

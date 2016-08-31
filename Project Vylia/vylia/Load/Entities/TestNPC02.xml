@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Actor>
+  <Name>Fellow Brawler</Name>
+  <Dimensions>
+    <X>32</X>
+    <Y>48</Y>
+  </Dimensions>
+  <GridPosition>
+    <X>12</X>
+    <Y>7</Y>
+  </GridPosition>
+  <DefaultFacing>POSITION_LEFT</DefaultFacing>
+  <BaseSpeed>
+    <X>1</X>
+    <Y>1</Y>
+  </BaseSpeed>
+  <TextureURL>sprites/male_brawler_1</TextureURL>
+
+  <ActorConversation type="Root">
+    <ConversationList>
+      <ConversationNode type="Text">
+        <Text>Hola! Mi nombre es :#4AC9FF#:Fenhron:#FFFFFF#:, pero mis amigos me llaman :#FF804A#:Fen:#ffffff#:.</Text>
+      </ConversationNode>
+      <ConversationNode type="Text">
+        <Text>Estoy aquí para ayudar al desarrollador con los dialogos... He escuchado que es mucho trabajo.</Text>
+      </ConversationNode>
+      <ConversationNode type="Choice">
+        <Text>No crees tu que es demasiado trabajo?</Text>
+        <YesNode type="Root">
+          <ConversationList>
+            <ConversationNode type="Text">
+              <Text>Hmm... Si, yo también lo creo...</Text>
+            </ConversationNode>
+            <ConversationNode type="Choice">
+              <Text>Esta es una prueba de :#4AC9FF#:recursividad de elecciones y dialogos:#ffffff#:</Text>
+              <YesNode type="Text">
+                <Text>Has elegido :#FF804A#:SI:#ffffff#:</Text>
+              </YesNode>
+              <NoNode type="Root">
+                <ConversationList>
+                  <ConversationNode type="Text">
+                    <Text>Has elegido :#FF804A#:NO:#ffffff#:</Text>
+                  </ConversationNode>
+                  <ConversationNode type="Choice">
+                    <Text>Esta es la segunda prueba de :#FFC9FF#:recursividad de elecciones y dialogos:#ffffff#:</Text>
+                    <YesNode type="Text">
+                      <Text>Esta vez elegiste SI!</Text>
+                    </YesNode>
+                    <NoNode type="Text">
+                      <Text>Esta vez elegiste NO!</Text>
+                    </NoNode>
+                  </ConversationNode>
+                </ConversationList>
+              </NoNode>
+            </ConversationNode>
+          </ConversationList>
+        </YesNode>
+        <NoNode type="Text">
+          <Text>Pues inténtalo... Yo no creo que sea poco.</Text>
+        </NoNode>
+      </ConversationNode>
+      <ConversationNode type="Text">
+        <Text>En fin, ha sido un gusto.</Text>
+      </ConversationNode>
+      <ConversationNode type="Text">
+        <Text>Nos vemos pronto!</Text>
+      </ConversationNode>
+    </ConversationList>
+  </ActorConversation>
+</Actor>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ItemDatabase>
+  <Items>
+    <Item>
+    </Item>
+  </Items>
+  <Consumables>
+    <Name>Weak Life Potion</Name>
+    <Script>healCharacter:200;</Script>
+    <Type>HP_Potion</Type>
+    <Icon>hp_potion_1</Icon>
+  </Consumables>
+  <Weapons>
+    
+  </Weapons>
+  <Equipments>
+    
+  </Equipments>
+  <Ammos>
+    
+  </Ammos>
+  <QuestItems>
+    
+  </QuestItems>
+</ItemDatabase>

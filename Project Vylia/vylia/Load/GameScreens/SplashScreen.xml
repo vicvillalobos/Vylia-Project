@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SplashScreen>
+  <title>VS Studio</title>
+  <Path>SplashScreen/vslogo.png</Path>
+  <FadeInDuration>1000</FadeInDuration>
+  <FadeOutDuration>700</FadeOutDuration>
+  <Duration>2000</Duration>
+</SplashScreen>

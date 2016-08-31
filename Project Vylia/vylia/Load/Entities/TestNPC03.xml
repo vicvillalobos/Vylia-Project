@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Actor>
+  <Name>NPC Test 3</Name>
+  <Dimensions>
+    <X>32</X>
+    <Y>48</Y>
+  </Dimensions>
+  <GridPosition>
+    <X>5</X>
+    <Y>15</Y>
+  </GridPosition>
+  <DefaultFacing>POSITION_DOWN</DefaultFacing>
+  <BaseSpeed>
+    <X>1</X>
+    <Y>1</Y>
+  </BaseSpeed>
+  <TextureURL>sprites/f_actor2</TextureURL>
+
+  <ActorConversation type="Root">
+    <ConversationList>
+      <ConversationNode type="Text">
+        <Text>Hola!</Text>
+      </ConversationNode>
+      <ConversationNode type="Text">
+        <Text>Dejame ver si tienes oro suficiente..</Text>
+      </ConversationNode>
+      <ConversationNode type="Condition">
+        <ConditionParameters>
+          <ConditionParameter NPCSwitch="ASKED_MONEY" />
+        </ConditionParameters>
+        <SuccessNode>
+          <ConversationList>
+            <ConversationNode type="Text">
+              <Text>Creo que ya te he quitado dinero antes.</Text>
+            </ConversationNode>
+          </ConversationList>
+        </SuccessNode>
+        <FailNode>
+          <ConversationList>
+            <ConversationNode type="Condition">
+              <ConditionParameters>
+                <ConditionParameter playerHasMoney="200" />
+              </ConditionParameters>
+              <SuccessNode type="Root">
+                <ConversationList>
+                  <ConversationNode type="Text">
+                    <Text>Si tienes! Dejame restarte.</Text>
+                  </ConversationNode>
+                  <ConversationNode type="Action">
+                    <ActionList>
+                      <ConversationAction changeMoney="-200" />
+                      <ConversationAction setNPCSwitch="ASKED_MONEY" value="true"/>
+                    </ActionList>
+                  </ConversationNode>
+                </ConversationList>
+              </SuccessNode>
+              <FailNode type="Root">
+                <ConversationList>
+                  <ConversationNode type="Text">
+                    <Text>No tienes dinero! Toma un poco.</Text>
+                  </ConversationNode>
+                  <ConversationNode type="Action">
+                    <ActionList>
+                      <ConversationAction changeMoney="200" />
+                    </ActionList>
+                  </ConversationNode>
+                </ConversationList>
+              </FailNode>
+            </ConversationNode>
+          </ConversationList>
+        </FailNode>
+      </ConversationNode>
+      <ConversationNode type="Text">
+        <Text>Vuelve pronto!</Text>
+      </ConversationNode>
+    </ConversationList>
+  </ActorConversation>
+</Actor>

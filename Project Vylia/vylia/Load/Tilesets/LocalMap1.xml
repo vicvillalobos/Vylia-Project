@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tileset>
+  <Name>Local Map 1</Name>
+  <Width>16</Width>
+  <Height>16</Height>
+  <File>Tilesets/Castle2.png</File>
+  <Tiles>
+    <Tile>
+      <Id>0</Id>
+      <TexturePosition>
+        <X>0</X>
+        <Y>0</Y>
+      </TexturePosition>
+      <Name>Void</Name>
+      <TileTypeName>Void</TileTypeName>
+    </Tile>
+  </Tiles>
+</Tileset>

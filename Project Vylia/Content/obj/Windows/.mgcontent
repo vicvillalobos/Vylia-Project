@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>F:/Project Vylia/Project Vylia/Content/SplashScreen/Logo.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/SplashScreen/vslogo.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Sprites/blankDot.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Sprites/bloodelf_male2.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Tilesets/Castle2.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Tilesets/magecity_0.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Fonts/pixelated.fnt</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Fonts/pixelated_0.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Sprites/f_actor1.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Fonts/raleway.fnt</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Fonts/raleway_0.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Fonts/raleway_outline.fnt</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Fonts/raleway_outline_0.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Sprites/male_brawler_1.bmp</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Sprites/char_shadow.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Sprites/m_mage_1.png</File>
+    <File>F:/Project Vylia/Project Vylia/Content/Sprites/f_actor2.png</File>
+  </SourceFiles>
+</SourceFileCollection>

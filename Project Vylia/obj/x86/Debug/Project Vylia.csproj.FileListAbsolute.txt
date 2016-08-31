@@ -1,0 +1,87 @@
+c:\users\hp victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\obj\x86\Debug\Project Vylia.csprojResolveAssemblyReference.cache
+c:\users\hp victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\obj\x86\Debug\Project Vylia.exe
+c:\users\hp victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\obj\x86\Debug\Project Vylia.pdb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Project Vylia.exe
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Project Vylia.pdb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\MonoGame.Framework.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.MediaFoundation.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.XAudio2.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.DXGI.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.Direct3D11.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.Direct2D1.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.XInput.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.RawInput.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.Direct3D9.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\MonoGame.Framework.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.MediaFoundation.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.XAudio2.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.DXGI.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.Direct3D11.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.Direct2D1.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.XInput.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.RawInput.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\SharpDX.Direct3D9.xml
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\MonoGame.Extended.dll
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\SplashScreen\Logo.png
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\SplashScreen\vslogo.png
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Sprites\blankDot.png
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Sprites\bloodelf_male2.png
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Fonts\Kootenay.xnb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Fonts\pixelated.xnb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Fonts\pixelated_0.xnb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\SplashScreen\Logo.xnb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\SplashScreen\vslogo.xnb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Sprites\blankDot.xnb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Sprites\bloodelf_male2.xnb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Tilesets\Castle2.xnb
+C:\Users\HP Victor\documents\visual studio 2015\Projects\Project Vylia\Project Vylia\Content\Tilesets\magecity_0.xnb
+F:\Project Vylia\Project Vylia\obj\x86\Debug\Project Vylia.exe
+F:\Project Vylia\Project Vylia\obj\x86\Debug\Project Vylia.pdb
+F:\Project Vylia\Project Vylia\obj\x86\Debug\Project Vylia.csprojResolveAssemblyReference.cache
+F:\Project Vylia\Project Vylia\Content\Fonts\pixelated.xnb
+F:\Project Vylia\Project Vylia\Content\Fonts\pixelated_0.xnb
+F:\Project Vylia\Project Vylia\Content\SplashScreen\Logo.xnb
+F:\Project Vylia\Project Vylia\Content\SplashScreen\vslogo.xnb
+F:\Project Vylia\Project Vylia\Content\Sprites\blankDot.xnb
+F:\Project Vylia\Project Vylia\Content\Sprites\bloodelf_male2.xnb
+F:\Project Vylia\Project Vylia\Content\Tilesets\Castle2.xnb
+F:\Project Vylia\Project Vylia\Content\Tilesets\magecity_0.xnb
+F:\Project Vylia\Project Vylia\Content\SplashScreen\Logo.png
+F:\Project Vylia\Project Vylia\Content\SplashScreen\vslogo.png
+F:\Project Vylia\Project Vylia\Content\Sprites\blankDot.png
+F:\Project Vylia\Project Vylia\Content\Sprites\bloodelf_male2.png
+F:\Project Vylia\Project Vylia\Content\Fonts\Kootenay.xnb
+F:\Project Vylia\Project Vylia\Project Vylia.exe
+F:\Project Vylia\Project Vylia\Project Vylia.pdb
+F:\Project Vylia\Project Vylia\MonoGame.Extended.dll
+F:\Project Vylia\Project Vylia\MonoGame.Framework.dll
+F:\Project Vylia\Project Vylia\SharpDX.MediaFoundation.dll
+F:\Project Vylia\Project Vylia\SharpDX.dll
+F:\Project Vylia\Project Vylia\SharpDX.XAudio2.dll
+F:\Project Vylia\Project Vylia\SharpDX.DXGI.dll
+F:\Project Vylia\Project Vylia\SharpDX.Direct3D11.dll
+F:\Project Vylia\Project Vylia\SharpDX.Direct2D1.dll
+F:\Project Vylia\Project Vylia\SharpDX.XInput.dll
+F:\Project Vylia\Project Vylia\SharpDX.RawInput.dll
+F:\Project Vylia\Project Vylia\SharpDX.Direct3D9.dll
+F:\Project Vylia\Project Vylia\MonoGame.Framework.xml
+F:\Project Vylia\Project Vylia\SharpDX.MediaFoundation.xml
+F:\Project Vylia\Project Vylia\SharpDX.xml
+F:\Project Vylia\Project Vylia\SharpDX.XAudio2.xml
+F:\Project Vylia\Project Vylia\SharpDX.DXGI.xml
+F:\Project Vylia\Project Vylia\SharpDX.Direct3D11.xml
+F:\Project Vylia\Project Vylia\SharpDX.Direct2D1.xml
+F:\Project Vylia\Project Vylia\SharpDX.XInput.xml
+F:\Project Vylia\Project Vylia\SharpDX.RawInput.xml
+F:\Project Vylia\Project Vylia\SharpDX.Direct3D9.xml
+F:\Project Vylia\Project Vylia\Content\Sprites\f_actor1.xnb
+F:\Project Vylia\Project Vylia\Content\Fonts\raleway.xnb
+F:\Project Vylia\Project Vylia\Content\Fonts\raleway_0.xnb
+F:\Project Vylia\Project Vylia\Content\Fonts\raleway_outline.xnb
+F:\Project Vylia\Project Vylia\Content\Fonts\raleway_outline_0.xnb
+F:\Project Vylia\Project Vylia\Content\Sprites\male_brawler_1.xnb
+F:\Project Vylia\Project Vylia\Content\Sprites\char_shadow.xnb
+F:\Project Vylia\Project Vylia\Content\Sprites\f_actor2.xnb
+F:\Project Vylia\Project Vylia\Content\Sprites\m_mage_1.xnb
