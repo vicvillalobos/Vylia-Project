@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Warp>
+  <GridPosition>
+    <X>10</X>
+    <Y>15</Y>
+  </GridPosition>
+  <DestinationMap>vylia/Load/Tilemaps/TestMap2.xml</DestinationMap>
+  <DestinationPosition>
+    <X>10</X>
+    <Y>9</Y>
+  </DestinationPosition>
+</Warp>

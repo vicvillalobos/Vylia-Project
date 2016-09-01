@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>F:/Project Vylia/Project Vylia/Content/Fonts/raleway_outline.fnt</SourceFile>
-  <SourceTime>2016-08-20T16:58:45.6665144-03:00</SourceTime>
-  <DestFile>F:/Project Vylia/Project Vylia/Content/bin/Windows/Fonts/raleway_outline.xnb</DestFile>
-  <DestTime>2016-08-26T13:35:48.8485048-03:00</DestTime>
+  <SourceFile>C:/Users/HP Victor/Documents/GitHub/Vylia-Project/Project Vylia/Content/Fonts/raleway_outline.fnt</SourceFile>
+  <SourceTime>2016-08-31T14:44:34.2457065-03:00</SourceTime>
+  <DestFile>C:/Users/HP Victor/Documents/GitHub/Vylia-Project/Project Vylia/Content/bin/Windows/Fonts/raleway_outline.xnb</DestFile>
+  <DestTime>2016-08-31T15:19:34.1081028-03:00</DestTime>
   <Importer>BitmapFontImporter</Importer>
-  <ImporterTime>2016-04-08T12:54:30-03:00</ImporterTime>
+  <ImporterTime>2016-08-31T14:44:34.6397291-03:00</ImporterTime>
   <Processor>BitmapFontProcessor</Processor>
-  <ProcessorTime>2016-04-08T12:54:30-03:00</ProcessorTime>
+  <ProcessorTime>2016-08-31T14:44:34.6397291-03:00</ProcessorTime>
   <Dependencies />
   <BuildAsset />
   <BuildOutput />

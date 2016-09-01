@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>F:/Project Vylia/Project Vylia/Content/Sprites/char_shadow.png</SourceFile>
-  <SourceTime>2016-08-23T12:58:19.004464-03:00</SourceTime>
-  <DestFile>F:/Project Vylia/Project Vylia/Content/bin/Windows/Sprites/char_shadow.xnb</DestFile>
-  <DestTime>2016-08-26T13:35:49.1449053-03:00</DestTime>
+  <SourceFile>C:/Users/HP Victor/Documents/GitHub/Vylia-Project/Project Vylia/Content/Sprites/char_shadow.png</SourceFile>
+  <SourceTime>2016-08-31T14:44:34.2617075-03:00</SourceTime>
+  <DestFile>C:/Users/HP Victor/Documents/GitHub/Vylia-Project/Project Vylia/Content/bin/Windows/Sprites/char_shadow.xnb</DestFile>
+  <DestTime>2016-08-31T15:19:34.1331042-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T03:36:08-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

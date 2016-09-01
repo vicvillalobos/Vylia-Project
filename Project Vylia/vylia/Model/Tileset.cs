@@ -64,9 +64,9 @@ namespace Project_Vylia.vylia.Model
             }
         }
 
-        public void LoadTexture()
+        public void LoadTexture(GameScreen gs)
         {
-            texture = ScreenManager.Instance.Content.Load<Texture2D>(fileName);
+            texture = gs.Content.Load<Texture2D>(fileName);
         }
 
         public String Name { get { return name; } set { name = value; } }

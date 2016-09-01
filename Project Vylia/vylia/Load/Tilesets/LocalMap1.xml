@@ -3,6 +3,7 @@
   <Name>Local Map 1</Name>
   <Width>16</Width>
   <Height>16</Height>
+  <TileSize>32</TileSize>
   <File>Tilesets/Castle2.png</File>
   <Tiles>
     <Tile>

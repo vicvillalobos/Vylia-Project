@@ -85,3 +85,51 @@ F:\Project Vylia\Project Vylia\Content\Sprites\male_brawler_1.xnb
 F:\Project Vylia\Project Vylia\Content\Sprites\char_shadow.xnb
 F:\Project Vylia\Project Vylia\Content\Sprites\f_actor2.xnb
 F:\Project Vylia\Project Vylia\Content\Sprites\m_mage_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\obj\x86\Debug\Project Vylia.exe
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\obj\x86\Debug\Project Vylia.pdb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\obj\x86\Debug\Project Vylia.csprojResolveAssemblyReference.cache
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\pixelated.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\pixelated_0.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\raleway.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\raleway_0.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\raleway_outline.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\raleway_outline_0.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\SplashScreen\Logo.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\SplashScreen\vslogo.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\blankDot.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\bloodelf_male2.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\char_shadow.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_actor1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_actor2.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\male_brawler_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\m_mage_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Tilesets\Castle2.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Tilesets\magecity_0.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\SplashScreen\Logo.png
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\SplashScreen\vslogo.png
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\blankDot.png
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\bloodelf_male2.png
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\Kootenay.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Project Vylia.exe
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Project Vylia.pdb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\MonoGame.Extended.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\MonoGame.Framework.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.MediaFoundation.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.XAudio2.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.DXGI.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.Direct3D11.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.Direct2D1.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.XInput.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.RawInput.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.Direct3D9.dll
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\MonoGame.Framework.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.MediaFoundation.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.XAudio2.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.DXGI.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.Direct3D11.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.Direct2D1.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.XInput.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.RawInput.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.Direct3D9.xml

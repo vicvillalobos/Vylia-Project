@@ -86,4 +86,9 @@
       <Source>vylia/Load/Entities/TestNPC03.xml</Source>
     </Actor>
   </ActorList>
+  <WarpList>
+    <Warp>
+      <Source>vylia/Load/Entities/Warps/testMap2-testMap1.xml</Source>
+    </Warp>
+  </WarpList>
 </Tilemap>

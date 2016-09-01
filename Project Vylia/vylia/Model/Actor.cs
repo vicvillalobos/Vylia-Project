@@ -198,11 +198,11 @@ namespace Project_Vylia.vylia.Model
             facing = defaultFacing;
         }
         
-        public virtual void LoadContent()
+        public virtual void LoadContent(GameScreen gs)
         {
             try
             {
-                Texture2D tex = ScreenManager.Instance.Content.Load<Texture2D>(textureURL);
+                Texture2D tex = gs.Content.Load<Texture2D>(textureURL);
                 Console.WriteLine("TextureURL: {0}, tex: {1}", textureURL, tex.ToString());
 
                 foreach (GameSprite sprite in sprites)

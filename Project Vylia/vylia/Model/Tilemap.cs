@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Project_Vylia.vylia.Model.Entities;
 using Project_Vylia.vylia.Utilities;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace Project_Vylia.vylia.Model
 
         private TilemapLayer[] map;
         private Actor[] actorList;
+        private Warp[] warpList;
         private TilemapCollisionLayer colLayer;
 
         public List<int> CollisionList;
@@ -37,6 +39,12 @@ namespace Project_Vylia.vylia.Model
         {
             get { return actorList; }
             set { actorList = value; }
+        }
+
+        public Warp[] WarpList
+        {
+            get { return warpList; }
+            set { warpList = value; }
         }
 
         public TilemapCollisionLayer CollisionLayer
@@ -59,8 +67,8 @@ namespace Project_Vylia.vylia.Model
         public void DrawTile(SpriteBatch spr, Vector2 cameraPosition, int layer, int i, int j)
         {
             int index = GetIndexFromCords((int)Math.Floor(i / GameSettings.GridSize), (int)Math.Floor(j / GameSettings.GridSize));
-            if(index < map[layer].Tiles.Length && index >= 0)
-                Tileset.DrawTile(spr, map[layer].Tiles[index],new Vector2(i - cameraPosition.X,j - cameraPosition.Y));
+            if (index < map[layer].Tiles.Length && index >= 0)
+                Tileset.DrawTile(spr, map[layer].Tiles[index], new Vector2(i - cameraPosition.X, j - cameraPosition.Y));
         }
 
         public void DrawCollisionTile(SpriteBatch spr, Vector2 cameraPosition, int layer, int i, int j, Texture2D blankDot)
@@ -69,7 +77,7 @@ namespace Project_Vylia.vylia.Model
             if (index < CollisionLayer.CollisionTiles.Length && index >= 0)
             {
                 float r, g, b, a;
-                switch(CollisionLayer.CollisionTiles[index] - CollisionFirstID)
+                switch (CollisionLayer.CollisionTiles[index] - CollisionFirstID)
                 {
                     default:
                         r = 0;
@@ -92,7 +100,7 @@ namespace Project_Vylia.vylia.Model
 
                 }
 
-                DrawHelper.drawRectangle(spr, blankDot, new Rectangle((int) (i - cameraPosition.X), (int)(j - cameraPosition.Y), (int)GameSettings.GridSize, (int)GameSettings.GridSize),new Color(r,g,b,a));
+                DrawHelper.drawRectangle(spr, blankDot, new Rectangle((int)(i - cameraPosition.X), (int)(j - cameraPosition.Y), (int)GameSettings.GridSize, (int)GameSettings.GridSize), new Color(r, g, b, a));
             }
         }
 
@@ -100,18 +108,18 @@ namespace Project_Vylia.vylia.Model
         {
             return y * this.width + x;
         }
-        
+
         public int GetIndexFromCordsP(float x, float y)
         {
             int gy = (int)Math.Floor((y / GameSettings.GridSize));
             int gx = (int)Math.Floor((x / GameSettings.GridSize));
 
-            return (int)( gy * this.width + gx );
+            return (int)(gy * this.width + gx);
         }
 
         public Vector2 GetCordsFromIndex(int index)
         {
-            return new Vector2((int) (index % this.width),(int)(Math.Floor((float) index / this.width)));
+            return new Vector2((int)(index % this.width), (int)(Math.Floor((float)index / this.width)));
         }
 
         public Vector2 GetCordsFromIndexP(int index)
@@ -147,9 +155,10 @@ namespace Project_Vylia.vylia.Model
             this.colLayer = d.CollisionLayer;
             this.tileset = d.Tileset;
             this.actorList = d.ActorList;
+            this.warpList = d.warpList;
             this.colFirstID = d.CollisionFirstID;
 
-            foreach(TilemapLayer layer in map)
+            foreach (TilemapLayer layer in map)
             {
                 string[] split = layer.TileMapArray.Split(new char[1] { ',' });
                 List<int> numbers = new List<int>();
@@ -188,10 +197,19 @@ namespace Project_Vylia.vylia.Model
                 {
                     actorList[i] = actorList[i].LoadFromSource();
                     actorList[i].Initialize();
-                    Console.WriteLine("Actor {0} Dimensions: {1}", actorList[i].Name, actorList[i].Dimensions);   
+                    Console.WriteLine("Actor {0} Dimensions: {1}", actorList[i].Name, actorList[i].Dimensions);
                 }
             }
 
+            if (warpList == null || warpList.Length <= 0)
+            {
+                Console.WriteLine("WarpList not found or empty");
+            } else
+            {
+                for (int i = 0; i < warpList.Length; i++) {
+                    warpList[i] = warpList[i].LoadFromSource();
+                }
+            }
         }
 
         public bool checkCollision(Rectangle pos)

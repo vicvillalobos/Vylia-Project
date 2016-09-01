@@ -11,6 +11,7 @@ using Project_Vylia.vylia.Utilities;
 using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended.BitmapFonts;
 using Project_Vylia.vylia.Model.Conversation;
+using Microsoft.Xna.Framework.Content;
 
 namespace Project_Vylia.vylia.GameScreens
 {
@@ -19,10 +20,11 @@ namespace Project_Vylia.vylia.GameScreens
 
         public LocalMap() : base()
         {
+            this.content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "LocalMapContent");
             xmlSettings = "vylia/Load/GameScreens/LocalMapScreen.xml";
-            fadeIn(400);
+            
         }
-
+        
         private String initialMap;
         private Tilemap actualMap;
         private Camera camera;
@@ -80,17 +82,19 @@ namespace Project_Vylia.vylia.GameScreens
             base.LoadContent();
             ScreenManager.Instance.addError(new GameError("["+secondsElapsed+"] LocalMap Screen Cargado!"));
 
-            blankDot = ScreenManager.Instance.Content.Load<Texture2D>("Sprites/blankDot.png");
-            charShadow = ScreenManager.Instance.Content.Load<Texture2D>("Sprites/char_shadow.png");
+            blankDot = this.content.Load<Texture2D>("Sprites/blankDot.png");
+            charShadow = this.content.Load<Texture2D>("Sprites/char_shadow.png");
 
-            actualMap.Tileset.LoadTexture();
+            actualMap.Tileset.LoadTexture(this);
 
             foreach (Actor a in actualMap.ActorList)
             {
-                a.LoadContent();
+                a.LoadContent(this);
             }
 
-            player.LoadContent();
+            player.LoadContent(this);
+
+            fadeIn(300);
 
         }
 
@@ -228,7 +232,7 @@ namespace Project_Vylia.vylia.GameScreens
                         stopFade();
                     }
                     break;
-                case FadeState.FADE_OUT:
+                case FadeState.FADE_OUT: 
                     blackScreenPercent = percent;
                     if (percent >= 1)
                     {
@@ -250,12 +254,19 @@ namespace Project_Vylia.vylia.GameScreens
             actorsAbovePlayer = actorSortingResult.abovePlayer;
 
             actorsBehindPlayer = actorSortingResult.behindPlayer;
-            
+
+            if (actualMap.WarpList != null && actualMap.WarpList.Length > 0)
+            {
+                foreach (Warp w in actualMap.WarpList)
+                {
+                    w.checkEffect(player, this);
+                }
+            }
         }
 
         public override void UnloadContent()
         {
-
+            this.content.Unload();
         }
 
         public void fadeIn(int speed)
@@ -285,6 +296,15 @@ namespace Project_Vylia.vylia.GameScreens
 
         public void DrawEntities(SpriteBatch spriteBatch)
         {
+            // Warps
+            if (actualMap.WarpList != null && actualMap.WarpList.Length > 0)
+            {
+                foreach (Warp w in actualMap.WarpList)
+                {
+                    DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)(w.Position.X - camera.Position.X), (int)(w.Position.Y - camera.Position.Y), (int)GameSettings.GridSize, (int)GameSettings.GridSize), Color.White);
+                }
+            }
+
             // Ordenar Entidades por posicion.
             // Entidades arriba del jugador
             if (actorsBehindPlayer != null)

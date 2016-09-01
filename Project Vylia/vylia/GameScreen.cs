@@ -18,6 +18,12 @@ namespace Project_Vylia.vylia
         protected Player player;
 
         [XmlIgnore]
+        public ContentManager Content
+        {
+            get { return content; }
+        }
+
+        [XmlIgnore]
         public Type Type;
 
         [XmlIgnore]

@@ -79,6 +79,7 @@
     <Compile Include="vylia\Utilities\GameError.cs" />
     <Compile Include="vylia\Utilities\GridHelper.cs" />
     <Compile Include="vylia\Utilities\ItemDatabase.cs" />
+    <Compile Include="vylia\Utilities\TimeHelper.cs" />
     <Compile Include="vylia\XMLManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +115,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="vylia\Load\Entities\TestNPC03.xml" />
+    <Content Include="vylia\Load\Entities\Warps\testMap1-testMap2.xml" />
+    <Content Include="vylia\Load\Entities\Warps\testMap2-testMap1.xml" />
     <Content Include="vylia\Load\GameScreens\LocalMapScreen.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -122,6 +125,9 @@
     </Content>
     <Content Include="Icon.ico" />
     <Content Include="vylia\Load\Inventory\ItemDatabase.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="vylia\Load\Tilemaps\TestMap1.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="vylia\Load\Tilemaps\TestMap2.xml">
