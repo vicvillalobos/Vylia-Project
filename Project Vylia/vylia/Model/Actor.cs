@@ -34,6 +34,19 @@ namespace Project_Vylia.vylia.Model
         protected int money;
         public int Money { get { return money; } set { money = value; } }
 
+        public Rectangle CollisionBox
+        {
+            get
+            {
+                return new Rectangle(
+                (int)(position.X - (dimensions.X / 2) + 4),
+                (int)(position.Y + (dimensions.Y / 4) - 2),
+                (int)GameSettings.GridSize - 8,
+                (int)GameSettings.GridSize - 17
+                );
+            }
+        }
+
         private String source;
 
         private ConversationNode actorConversation;
@@ -225,12 +238,12 @@ namespace Project_Vylia.vylia.Model
             base.Draw(spr);
             if (sprites[facing].TextureLoaded)
             {
-                spr.Draw(shadow, new Rectangle(x,(int)(y + GameSettings.GridSize - 12), (int) Dimensions.X,16), new Color(255, 255, 255, 0.4f));
+                spr.Draw(shadow, new Rectangle(x - (int)(dimensions.X / 2), (int)(y + (int)(dimensions.Y / 2) - 14), (int) Dimensions.X,16), new Color(255, 255, 255, 0.4f));
 
-                spr.Draw(sprites[facing].Texture, new Rectangle(x, y - (int)(GameSettings.GridSize / 2), (int)(dimensions.X * (GameSettings.GridSize / dimensions.X)), (int)(dimensions.Y * (GameSettings.GridSize / (dimensions.X)))), sprites[facing].GetActualSprite(moving, ANIMATION_CYCLE_MS), Color.White);
+                spr.Draw(sprites[facing].Texture, new Rectangle(x - (int)(dimensions.X / 2), y - (int)(GameSettings.GridSize * 1.5f) + (int)(dimensions.Y / 2), (int)(dimensions.X * (GameSettings.GridSize / dimensions.X)), (int)(dimensions.Y * (GameSettings.GridSize / (dimensions.X)))), sprites[facing].GetActualSprite(moving, ANIMATION_CYCLE_MS), Color.White);
             }
             else
-                DrawHelper.drawRectangle(spr, blankDot, new Rectangle((int)x, (int)y - (int)(GameSettings.GridSize / 2), (int)dimensions.X, (int)dimensions.Y), Color.Blue);
+                DrawHelper.drawRectangle(spr, blankDot, new Rectangle((int)x - (int)(dimensions.X), (int)y - (int)(GameSettings.GridSize) + (int)(dimensions.X / 2), (int)dimensions.X, (int)dimensions.Y), Color.Blue);
 
         }
         
@@ -268,9 +281,12 @@ namespace Project_Vylia.vylia.Model
 
         public override void Update(GameTime gt, Tilemap map)
         {
-            Vector2 pos = Position + speed;
+            Rectangle pos = CollisionBox;
 
-            if (!map.checkCollision(new Rectangle((int)pos.X + 4, (int)pos.Y + 17, (int)GameSettings.GridSize - 8, (int)GameSettings.GridSize - 17)))
+            pos.X += (int) speed.X;
+            pos.Y += (int) speed.Y;
+
+            if (!map.checkCollision(pos))
             {
                 // collision. full stop.
                 speed = new Vector2(0, 0);

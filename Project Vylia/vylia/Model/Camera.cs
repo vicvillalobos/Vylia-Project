@@ -13,13 +13,45 @@ namespace Project_Vylia.vylia.Model
         private GameObject target;
         private int deadzone = 1;
 
-        public Camera(GameObject go)
+        public Camera(GameObject go, Tilemap map)
         {
             dimensions = new Vector2(GameSettings.ScreenWidth,GameSettings.ScreenHeight);
             Target = go;
+            setPositionByTarget(map);
         }
 
         public GameObject Target { set { target = value; } }
+
+        public void setPositionByTarget(Tilemap map)
+        {
+            if (this.target.Position.X <= (this.Dimensions.X / 2))
+            {
+                this.position.X = 0;
+
+            } else if(this.target.Position.X >= (map.Width * GameSettings.GridSize) - (this.Dimensions.X / 2))
+            {
+                this.position.X = (map.Width * GameSettings.GridSize) - this.Dimensions.X;
+            } else
+            {
+                this.position.X = this.target.CenterPosition.X - (this.Dimensions.X / 2);
+            }
+
+
+            if (this.target.Position.Y <= (this.Dimensions.Y / 2))
+            {
+                this.position.Y = 0;
+
+            }
+            else if (this.target.Position.Y >= (map.Height * GameSettings.GridSize) - (this.Dimensions.Y / 2))
+            {
+                this.position.Y = (map.Height * GameSettings.GridSize) - this.Dimensions.Y;
+            }
+            else
+            {
+                this.position.Y = this.target.Position.Y - (this.Dimensions.Y / 2);
+            }
+
+        }
 
         public override void Update(GameTime gameTime, Tilemap map)
         {
@@ -93,6 +125,19 @@ namespace Project_Vylia.vylia.Model
                 }
             }
 
+        }
+        public Vector2 adjustVector2(Vector2 r)
+        {
+            r.X -= (int)Position.X;
+            r.Y -= (int)Position.Y;
+            return r;
+        }
+
+        public Rectangle adjustRectangle(Rectangle r)
+        {
+            r.X -= (int) Position.X;
+            r.Y -= (int) Position.Y;
+            return r;
         }
 
     }

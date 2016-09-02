@@ -14,7 +14,8 @@ namespace Project_Vylia.vylia
 
         public const bool FullScreen = false;
 
-        public const float GridSize = 0.04f * ScreenWidth;
+        //public const float GridSize = 0.04f * ScreenWidth;
+        public const float GridSize = 32;
 
         public const float GameBaseSpeed = GridSize / 32;
 

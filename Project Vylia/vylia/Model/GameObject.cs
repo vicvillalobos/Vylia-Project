@@ -40,6 +40,11 @@ namespace Project_Vylia.vylia.Model
             set { position = new Vector2(value.X - (float) Math.Floor(dimensions.X / 2f), value.Y - (float) Math.Floor(dimensions.Y / 2f)); }
         }
 
+        public Vector2 CenterGridPosition
+        {
+            get { return new Vector2((float)Math.Floor(CenterPosition.X / GameSettings.GridSize), (float)Math.Floor(CenterPosition.Y / GameSettings.GridSize)); }
+        }
+
         public Vector2 GridPosition
         {
             get { return new Vector2((float)Math.Floor(position.X / GameSettings.GridSize), (float)Math.Floor(position.Y / GameSettings.GridSize)); }

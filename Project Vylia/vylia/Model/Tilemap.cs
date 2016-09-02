@@ -224,6 +224,10 @@ namespace Project_Vylia.vylia.Model
 
             foreach (int i in index)
             {
+                if(i >= colLayer.CollisionTiles.Length)
+                {
+                    return false;
+                }
                 int colTile = colLayer.CollisionTiles[i] - CollisionFirstID;
                 if (colTile == (int)CollisionTiles.SOLID || colTile == (int)CollisionTiles.WATER)
                 {

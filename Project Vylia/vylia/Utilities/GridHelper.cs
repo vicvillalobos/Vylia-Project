@@ -13,5 +13,15 @@ namespace Project_Vylia.vylia.Utilities
         {
             return new Vector2((float)Math.Floor(pixel.X / GameSettings.GridSize), (float)Math.Floor(pixel.Y / GameSettings.GridSize));
         }
+
+        public static bool CollisionDetect(Rectangle rect1, Rectangle rect2)
+        {
+
+            return (rect1.X < rect2.X + rect2.Width &&
+           rect1.X + rect1.Width > rect2.X &&
+           rect1.Y < rect2.Y + rect2.Height &&
+           rect1.Height + rect1.Y > rect2.Y) ;
+
+        }
     }
 }

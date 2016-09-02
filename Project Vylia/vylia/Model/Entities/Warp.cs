@@ -28,6 +28,8 @@ namespace Project_Vylia.vylia.Model.Entities
         public Warp () : base()
         {
             this.Type = this.GetType();
+            dimensions.X = GameSettings.GridSize;
+            dimensions.Y = GameSettings.GridSize;
         }
 
         public Warp(String m, Vector2 p) : base()
@@ -47,10 +49,14 @@ namespace Project_Vylia.vylia.Model.Entities
         {
             base.TouchEventHandler(p);
 
-            lm.fadeOut(300);
+            p.Speed = new Vector2(0, 0);
+            p.Moving = 0;
+
+            long now = TimeHelper.getActualMiliseconds();
             if (StartMs == 0)
             {
-                StartMs = TimeHelper.getActualMiliseconds();
+                lm.fadeOut(300);
+                StartMs = now;
 
                 ExecuteMs = StartMs + 300;
 
@@ -58,8 +64,9 @@ namespace Project_Vylia.vylia.Model.Entities
             }
 
             // move player to destination map and position
-            if (ExecuteMs != 0 && TimeHelper.getActualMiliseconds() > ExecuteMs)
+            if (ExecuteMs != 0 && now > ExecuteMs)
             {
+                Console.WriteLine(now);
                 lm.UnloadContent();
                 lm.InitialMap = this.DestinationMap;
                 p.GridPosition = this.DestinationPosition;
@@ -71,9 +78,14 @@ namespace Project_Vylia.vylia.Model.Entities
 
         public void checkEffect(Player p, LocalMap lm)
         {
-            if(p.GridPosition == this.GridPosition)
+
+            Rectangle pos = p.CollisionBox;
+            Rectangle wpos = new Rectangle((int) Position.X, (int)Position.Y, (int)Dimensions.X, (int)Dimensions.Y);
+
+            
+            if (GridHelper.CollisionDetect(pos,wpos))
             {
-                TouchEventHandler(p,lm);
+                 TouchEventHandler(p,lm);
             }
         }
     }

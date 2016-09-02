@@ -36,7 +36,7 @@ namespace Project_Vylia.vylia.GameScreens
         private Actor[] actorsBehindPlayer;
 
         private float blackScreenPercent = 1;
-        private FadeState fadeState = FadeState.STILL;
+        private FadeState fadeState = FadeState.BLACK;
         private long fadeSpeedMs = 0;
         private long fadeStartMs = 0;
 
@@ -64,7 +64,7 @@ namespace Project_Vylia.vylia.GameScreens
             }
         }
 
-        private enum FadeState { FADE_IN, FADE_OUT, STILL }
+        private enum FadeState { FADE_IN, FADE_OUT, BLACK, NONE }
 
         public String InitialMap
         {
@@ -101,8 +101,8 @@ namespace Project_Vylia.vylia.GameScreens
         public override void Initialize()
         {
             base.Initialize();
-            camera = new Camera(player);
             actualMap = new Tilemap(initialMap);
+            camera = new Camera(player,actualMap);
             cBox = new ConversationBox(new Rectangle(0, GameSettings.ScreenHeight - 100, GameSettings.ScreenWidth, 100), 10, 15);
             ScreenManager.Instance.addError(new GameError("["+secondsElapsed+"] Mapa inicial Cargado!"));
 
@@ -170,15 +170,18 @@ namespace Project_Vylia.vylia.GameScreens
                 Interact();
             }
 
-            if (!conversationActive)
+            if (!conversationActive && fadeState == FadeState.NONE)
             {
                 player.GetInput(frameInput, pastInput);
             }
             else
             {
-                if ((frameInput.IsKeyDown(Keys.Up) && !pastInput.IsKeyDown(Keys.Up)) || (frameInput.IsKeyDown(Keys.Down) && !pastInput.IsKeyDown(Keys.Down)))
+                if (conversationActive)
                 {
-                    ChangeChoice();
+                    if ((frameInput.IsKeyDown(Keys.Up) && !pastInput.IsKeyDown(Keys.Up)) || (frameInput.IsKeyDown(Keys.Down) && !pastInput.IsKeyDown(Keys.Down)))
+                    {
+                        ChangeChoice();
+                    }
                 }
             }
         }
@@ -192,7 +195,7 @@ namespace Project_Vylia.vylia.GameScreens
                 Interact();
             }
 
-            if (!conversationActive)
+            if (!conversationActive && fadeState == FadeState.NONE)
             {
                 player.GetInput(frameInput, pastInput);
             }
@@ -208,7 +211,6 @@ namespace Project_Vylia.vylia.GameScreens
 
         public override void Update(GameTime gameTime)
         {
-            player.Update(gameTime,actualMap);
             camera.Update(gameTime,actualMap);
 
             secondsElapsed = gameTime.ElapsedGameTime.Seconds;
@@ -216,7 +218,7 @@ namespace Project_Vylia.vylia.GameScreens
             long actualMs = 0;
             float percent = 0;
 
-            if (fadeState != FadeState.STILL)
+            if (fadeState != FadeState.BLACK && fadeState != FadeState.NONE)
             {
                 actualMs = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
                 percent = (((actualMs - fadeStartMs) * 100) / fadeSpeedMs) / 100f;
@@ -224,7 +226,6 @@ namespace Project_Vylia.vylia.GameScreens
 
             switch (fadeState)
             {
-
                 case FadeState.FADE_IN:
                     blackScreenPercent = 1 - percent;
                     if (percent >= 1)
@@ -240,7 +241,10 @@ namespace Project_Vylia.vylia.GameScreens
                     }
                     break;
                 default:
-                case FadeState.STILL:
+                case FadeState.NONE:
+                    player.Update(gameTime, actualMap);
+                    break;
+                case FadeState.BLACK:
                     break;
             }
 
@@ -289,7 +293,7 @@ namespace Project_Vylia.vylia.GameScreens
 
         public void stopFade()
         {
-            fadeState = FadeState.STILL;
+            fadeState = fadeState == FadeState.FADE_IN?FadeState.NONE:FadeState.BLACK;
             fadeSpeedMs = 0;
             fadeStartMs = 0;
         }
@@ -311,8 +315,13 @@ namespace Project_Vylia.vylia.GameScreens
             {
                 foreach (Actor a in actorsBehindPlayer)
                 {
-                    a.Draw(spriteBatch, (int)a.Position.X - (int)camera.Position.X, (int)a.Position.Y - (int)camera.Position.Y, blankDot, charShadow);
-
+                    try
+                    {
+                        a.Draw(spriteBatch, (int)a.Position.X - (int)camera.Position.X, (int)a.Position.Y - (int)camera.Position.Y, blankDot, charShadow);
+                    }
+                    catch (Exception ex) {
+                        Console.WriteLine("Exception: "+ex.Message);
+                    }
                 }
             }
 
@@ -328,6 +337,12 @@ namespace Project_Vylia.vylia.GameScreens
 
                 }
             }
+
+            if (GameSettings.DebugMode)
+            {
+                DrawHelper.drawRectangle(spriteBatch, blankDot, camera.adjustRectangle(player.CollisionBox) , Color.Yellow);
+            }
+
         }
 
         public void DrawDebug(SpriteBatch spriteBatch)
@@ -343,7 +358,7 @@ namespace Project_Vylia.vylia.GameScreens
 
                         }
 
-                }
+                    }
 
             }
 
@@ -384,15 +399,8 @@ namespace Project_Vylia.vylia.GameScreens
 
             spriteBatch.DrawString(ScreenManager.Instance.debugFont, "Animation Cycle Ms: " + player.ANIMATION_CYCLE_MS, new Vector2(10, 40), Color.White);
 
-            int ix = 0;
-            // Collisions
-            foreach (int ct in actualMap.CollisionList)
-            {
-                Vector2 posx = actualMap.GetCordsFromIndex(ct);
-                spriteBatch.DrawString(ScreenManager.Instance.debugFont, "[" + ix + "]: (" + ct + ") ( " + posx.X + " , " + posx.Y + " )", new Vector2(20, 40 + ix * 10), Color.White);
-                ix++;
-            }
-
+            spriteBatch.DrawString(ScreenManager.Instance.debugFont, "Center Grid Position: ( " + player.CenterGridPosition.X + " , " + player.CenterGridPosition.Y + " )", new Vector2(10, 50), Color.White);
+            
         }
 
         public override void Draw(SpriteBatch spriteBatch)

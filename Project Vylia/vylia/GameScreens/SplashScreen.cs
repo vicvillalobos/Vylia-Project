@@ -48,7 +48,7 @@ namespace Project_Vylia.vylia.GameScreens
 
             long time = (DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond) - msTransitionStart;
 
-            if (inputstate.GetPressedKeys().Length > 0 || inputstate2.Buttons.A == ButtonState.Pressed)
+            if (state != SplashState.FadeOut && inputstate.GetPressedKeys().Length > 0 || inputstate2.Buttons.A == ButtonState.Pressed)
             {
 
                 state = SplashState.FadeOut;
@@ -106,7 +106,7 @@ namespace Project_Vylia.vylia.GameScreens
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(image, new Rectangle(GameSettings.ScreenWidth / 2 - 80,GameSettings.ScreenHeight / 2 - 133 / 2,258,133), Color.White * percentTransition);
+            spriteBatch.Draw(image, new Rectangle(GameSettings.ScreenWidth / 2 - 129,GameSettings.ScreenHeight / 2 - 133 / 2,258,133), Color.White * percentTransition);
         }
 
     }
