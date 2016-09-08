@@ -15,6 +15,9 @@ namespace Project_Vylia.vylia.Model
         protected String name;
         protected int facing = POSITION_DOWN;
         protected int moving = 0;
+
+        protected int jumpState = JUMP_STILL;
+        protected Vector2 jumpStageTarget;
         
         public int Moving { get { return moving; } set { moving = value; } }
 
@@ -279,17 +282,46 @@ namespace Project_Vylia.vylia.Model
 
         }
 
+        /// <summary>
+        /// Hace que el actor salte un espacio
+        /// </summary>
+        public void StartJump()
+        {
+
+        }
+
+        /// <summary>
+        /// Hace que el actor salte tres espacios, siempre y cuando haya corrido 3 espacios antes
+        /// </summary>
+        public void StartLongJump()
+        {
+
+        }
+
         public override void Update(GameTime gt, Tilemap map)
         {
-            Rectangle pos = CollisionBox;
-
-            pos.X += (int) speed.X;
-            pos.Y += (int) speed.Y;
-
-            if (!map.checkCollision(pos))
+            if (jumpState == JUMP_STILL)
             {
-                // collision. full stop.
-                speed = new Vector2(0, 0);
+                Rectangle pos = CollisionBox;
+
+                pos.X += (int)speed.X;
+                pos.Y += (int)speed.Y;
+
+                if (!map.checkCollision(pos))
+                {
+                    // collision. full stop.
+                    speed = new Vector2(0, 0);
+                }
+            } else // Actor se encuentra en medio de un salto.
+            {
+                // Actor se encuentra en el principio del salto.
+                if(jumpState == JUMP_JUMPING)
+                {
+
+                } else // Actor se encuentra en el final del salto.
+                {
+
+                }
             }
 
             base.Update(gt, map);
@@ -302,6 +334,10 @@ namespace Project_Vylia.vylia.Model
         protected const int POSITION_UP = 1;
         protected const int POSITION_RIGHT = 2;
         protected const int POSITION_DOWN = 3;
+
+        protected const int JUMP_JUMPING = 0;
+        protected const int JUMP_STILL = 1;
+        protected const int JUMP_FALLING = 2;
         
         protected const float RUNSPEED = 2.5f * GameSettings.GameBaseSpeed;
         protected const float WALKSPEED = 1 * GameSettings.GameBaseSpeed;
