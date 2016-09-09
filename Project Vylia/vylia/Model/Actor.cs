@@ -4,9 +4,7 @@ using Project_Vylia.vylia.Model.Conversation;
 using Project_Vylia.vylia.Utilities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.Model
 {
@@ -44,8 +42,8 @@ namespace Project_Vylia.vylia.Model
                 return new Rectangle(
                 (int)(position.X - (dimensions.X / 2) + 4),
                 (int)(position.Y + (dimensions.Y / 4) - 2),
-                (int)GameSettings.GridSize - 8,
-                (int)GameSettings.GridSize - 17
+                (int)GAME_GRID_SIZE - 8,
+                (int)GAME_GRID_SIZE - 17
                 );
             }
         }
@@ -243,10 +241,10 @@ namespace Project_Vylia.vylia.Model
             {
                 spr.Draw(shadow, new Rectangle(x - (int)(dimensions.X / 2), (int)(y + (int)(dimensions.Y / 2) - 14), (int) Dimensions.X,16), new Color(255, 255, 255, 0.4f));
 
-                spr.Draw(sprites[facing].Texture, new Rectangle(x - (int)(dimensions.X / 2), y - (int)(GameSettings.GridSize * 1.5f) + (int)(dimensions.Y / 2), (int)(dimensions.X * (GameSettings.GridSize / dimensions.X)), (int)(dimensions.Y * (GameSettings.GridSize / (dimensions.X)))), sprites[facing].GetActualSprite(moving, ANIMATION_CYCLE_MS), Color.White);
+                spr.Draw(sprites[facing].Texture, new Rectangle(x - (int)(dimensions.X / 2), y - (int)(GAME_GRID_SIZE * 1.5f) + (int)(dimensions.Y / 2), (int)(dimensions.X * (GAME_GRID_SIZE / dimensions.X)), (int)(dimensions.Y * (GAME_GRID_SIZE / (dimensions.X)))), sprites[facing].GetActualSprite(moving, ANIMATION_CYCLE_MS), Color.White);
             }
             else
-                DrawHelper.drawRectangle(spr, blankDot, new Rectangle((int)x - (int)(dimensions.X), (int)y - (int)(GameSettings.GridSize) + (int)(dimensions.X / 2), (int)dimensions.X, (int)dimensions.Y), Color.Blue);
+                DrawHelper.drawRectangle(spr, blankDot, new Rectangle((int)x - (int)(dimensions.X), (int)y - (int)(GAME_GRID_SIZE) + (int)(dimensions.X / 2), (int)dimensions.X, (int)dimensions.Y), Color.Blue);
 
         }
         
@@ -287,6 +285,16 @@ namespace Project_Vylia.vylia.Model
         /// </summary>
         public void StartJump()
         {
+            Vector2 CimaSalto = new Vector2();
+            Vector2 FinSalto = new Vector2();
+            // Identificar posicion de cima y fin del salto
+
+            switch (facing) {
+                case POSITION_LEFT:
+                    CimaSalto.X = Position.X + 2 * GAME_GRID_SIZE;
+                    break;
+                    
+            }
 
         }
 
@@ -339,8 +347,8 @@ namespace Project_Vylia.vylia.Model
         protected const int JUMP_STILL = 1;
         protected const int JUMP_FALLING = 2;
         
-        protected const float RUNSPEED = 2.5f * GameSettings.GameBaseSpeed;
-        protected const float WALKSPEED = 1 * GameSettings.GameBaseSpeed;
+        protected const float RUNSPEED = 2.5f * GAME_BASE_SPEED;
+        protected const float WALKSPEED = 1 * GAME_BASE_SPEED;
         private int ANIMATION_CYCLE_MS = 800;
     }
 }

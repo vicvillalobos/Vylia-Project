@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Project_Vylia.vylia;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia
 {
@@ -35,7 +36,7 @@ namespace Project_Vylia
             graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensions.X;
             graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.Dimensions.Y;
             
-            graphics.IsFullScreen = GameSettings.FullScreen;
+            graphics.IsFullScreen = GAME_FULL_SCREEN;
             graphics.ApplyChanges();
 
             ScreenManager.Instance.Initialize();

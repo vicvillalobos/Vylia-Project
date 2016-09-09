@@ -1,9 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.Model
 {
@@ -42,13 +39,13 @@ namespace Project_Vylia.vylia.Model
 
         public Vector2 CenterGridPosition
         {
-            get { return new Vector2((float)Math.Floor(CenterPosition.X / GameSettings.GridSize), (float)Math.Floor(CenterPosition.Y / GameSettings.GridSize)); }
+            get { return new Vector2((float)Math.Floor(CenterPosition.X / GAME_GRID_SIZE), (float)Math.Floor(CenterPosition.Y / GAME_GRID_SIZE)); }
         }
 
         public Vector2 GridPosition
         {
-            get { return new Vector2((float)Math.Floor(position.X / GameSettings.GridSize), (float)Math.Floor(position.Y / GameSettings.GridSize)); }
-            set { position = new Vector2((value.X * GameSettings.GridSize), (value.Y * GameSettings.GridSize)); }
+            get { return new Vector2((float)Math.Floor(position.X / GAME_GRID_SIZE), (float)Math.Floor(position.Y / GAME_GRID_SIZE)); }
+            set { position = new Vector2((value.X * GAME_GRID_SIZE), (value.Y * GAME_GRID_SIZE)); }
         }
 
         public Vector2 Speed { get { return speed; } set { speed = value; } }

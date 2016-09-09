@@ -2,10 +2,7 @@
 using Project_Vylia.vylia.GameScreens;
 using Project_Vylia.vylia.Utilities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.Model.Entities
 {
@@ -28,8 +25,8 @@ namespace Project_Vylia.vylia.Model.Entities
         public Warp () : base()
         {
             this.Type = this.GetType();
-            dimensions.X = GameSettings.GridSize;
-            dimensions.Y = GameSettings.GridSize;
+            dimensions.X = GAME_GRID_SIZE;
+            dimensions.Y = GAME_GRID_SIZE;
         }
 
         public Warp(String m, Vector2 p) : base()

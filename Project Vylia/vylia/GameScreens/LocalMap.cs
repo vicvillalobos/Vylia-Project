@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Project_Vylia.vylia.Model;
@@ -12,6 +8,7 @@ using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended.BitmapFonts;
 using Project_Vylia.vylia.Model.Conversation;
 using Microsoft.Xna.Framework.Content;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.GameScreens
 {
@@ -103,7 +100,7 @@ namespace Project_Vylia.vylia.GameScreens
             base.Initialize();
             actualMap = new Tilemap(initialMap);
             camera = new Camera(player,actualMap);
-            cBox = new ConversationBox(new Rectangle(0, GameSettings.ScreenHeight - 100, GameSettings.ScreenWidth, 100), 10, 15);
+            cBox = new ConversationBox(new Rectangle(0, GAME_SCREEN_HEIGHT - 100, GAME_SCREEN_WIDTH, 100), 10, 15);
             ScreenManager.Instance.addError(new GameError("["+secondsElapsed+"] Mapa inicial Cargado!"));
 
         }
@@ -305,7 +302,7 @@ namespace Project_Vylia.vylia.GameScreens
             {
                 foreach (Warp w in actualMap.WarpList)
                 {
-                    DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)(w.Position.X - camera.Position.X), (int)(w.Position.Y - camera.Position.Y), (int)GameSettings.GridSize, (int)GameSettings.GridSize), Color.White);
+                    DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)(w.Position.X - camera.Position.X), (int)(w.Position.Y - camera.Position.Y), (int)GAME_GRID_SIZE, (int)GAME_GRID_SIZE), Color.White);
                 }
             }
 
@@ -338,7 +335,7 @@ namespace Project_Vylia.vylia.GameScreens
                 }
             }
 
-            if (GameSettings.DebugMode)
+            if (GAME_DEBUG_MODE)
             {
                 DrawHelper.drawRectangle(spriteBatch, blankDot, camera.adjustRectangle(player.CollisionBox) , Color.Yellow);
             }
@@ -349,9 +346,9 @@ namespace Project_Vylia.vylia.GameScreens
         {
             for (int x = 0; x < actualMap.Map.Length; x++)
             {
-                    for (int i = 0 - (int)camera.Position.X; i < actualMap.Width * GameSettings.GridSize - camera.Position.X; i += (int)GameSettings.GridSize)
+                    for (int i = 0 - (int)camera.Position.X; i < actualMap.Width * GAME_GRID_SIZE - camera.Position.X; i += (int)GAME_GRID_SIZE)
                     {
-                        for (int j = 0 - (int)camera.Position.Y; j < actualMap.Height * GameSettings.GridSize - camera.Position.Y; j += (int)GameSettings.GridSize)
+                        for (int j = 0 - (int)camera.Position.Y; j < actualMap.Height * GAME_GRID_SIZE - camera.Position.Y; j += (int)GAME_GRID_SIZE)
                         {
                             
                             actualMap.DrawCollisionTile(spriteBatch, camera.Position, x, i + (int)camera.Position.X, j + (int)camera.Position.Y, blankDot);
@@ -366,23 +363,23 @@ namespace Project_Vylia.vylia.GameScreens
             foreach (int ct in actualMap.CollisionList)
             {
                 Vector2 posx = actualMap.GetCordsFromIndexP(ct);
-                DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)(posx.X - camera.Position.X), (int)(posx.Y - camera.Position.Y), (int)GameSettings.GridSize, (int)GameSettings.GridSize), new Color(255, 0, 255, 0.05f));
+                DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)(posx.X - camera.Position.X), (int)(posx.Y - camera.Position.Y), (int)GAME_GRID_SIZE, (int)GAME_GRID_SIZE), new Color(255, 0, 255, 0.05f));
             }
 
             DrawEntities(spriteBatch);
 
 
             // Camera center
-            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)camera.CenterPosition.X - (int)camera.Position.X, 0, 1, GameSettings.ScreenHeight), Color.White);
-            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle(0, (int)camera.CenterPosition.Y - (int)camera.Position.Y, GameSettings.ScreenWidth, 1), Color.White);
+            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)camera.CenterPosition.X - (int)camera.Position.X, 0, 1, GAME_SCREEN_HEIGHT), Color.White);
+            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle(0, (int)camera.CenterPosition.Y - (int)camera.Position.Y, GAME_SCREEN_WIDTH, 1), Color.White);
 
             // Camera limits Horizontal
             DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle(0, (int)(camera.Dimensions.Y / 2 - camera.Position.Y), (int)camera.Dimensions.X, 1), Color.Yellow);
-            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle(0, (int)(actualMap.Height * GameSettings.GridSize - camera.Dimensions.Y / 2 - camera.Position.Y), (int)camera.Dimensions.X, 1), Color.Yellow);
+            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle(0, (int)(actualMap.Height * GAME_GRID_SIZE - camera.Dimensions.Y / 2 - camera.Position.Y), (int)camera.Dimensions.X, 1), Color.Yellow);
 
             // Camera limits Vertical
             DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)(camera.Dimensions.X / 2 - camera.Position.X), 0, 1, (int)camera.Dimensions.Y), Color.Yellow);
-            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)(actualMap.Width * GameSettings.GridSize - camera.Dimensions.X / 2 - camera.Position.X), 0, 1, (int)camera.Dimensions.Y), Color.Yellow);
+            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle((int)(actualMap.Width * GAME_GRID_SIZE - camera.Dimensions.X / 2 - camera.Position.X), 0, 1, (int)camera.Dimensions.Y), Color.Yellow);
 
             DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle(0, 0, 200, 200), new Color(0, 0, 0, 0.65f));
 
@@ -407,7 +404,7 @@ namespace Project_Vylia.vylia.GameScreens
         {
 
             // Debug Interface
-            if (GameSettings.DebugMode)
+            if (GAME_DEBUG_MODE)
             {
                 DrawDebug(spriteBatch);
 
@@ -421,9 +418,9 @@ namespace Project_Vylia.vylia.GameScreens
                     }
                     else
                     {
-                        for (int i = 0 - (int)camera.Position.X; i < actualMap.Width * GameSettings.GridSize - camera.Position.X; i += (int)GameSettings.GridSize)
+                        for (int i = 0 - (int)camera.Position.X; i < actualMap.Width * GAME_GRID_SIZE - camera.Position.X; i += (int)GAME_GRID_SIZE)
                         {
-                            for (int j = 0 - (int)camera.Position.Y; j < actualMap.Height * GameSettings.GridSize - camera.Position.Y; j += (int)GameSettings.GridSize)
+                            for (int j = 0 - (int)camera.Position.Y; j < actualMap.Height * GAME_GRID_SIZE - camera.Position.Y; j += (int)GAME_GRID_SIZE)
                             {
                                 //spriteBatch.DrawString(ScreenManager.Instance.font, i + "," + j, new Vector2(i, j), Color.Green);
 
@@ -456,7 +453,7 @@ namespace Project_Vylia.vylia.GameScreens
             }
 
             // Black Screen
-            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle(0, 0, GameSettings.ScreenWidth, GameSettings.ScreenHeight), new Color(0, 0, 0, blackScreenPercent));
+            DrawHelper.drawRectangle(spriteBatch, blankDot, new Rectangle(0, 0, GAME_SCREEN_WIDTH, GAME_SCREEN_HEIGHT), new Color(0, 0, 0, blackScreenPercent));
 
 
         }

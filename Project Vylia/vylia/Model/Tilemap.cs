@@ -4,10 +4,7 @@ using Project_Vylia.vylia.Model.Entities;
 using Project_Vylia.vylia.Utilities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.Model
 {
@@ -66,14 +63,14 @@ namespace Project_Vylia.vylia.Model
 
         public void DrawTile(SpriteBatch spr, Vector2 cameraPosition, int layer, int i, int j)
         {
-            int index = GetIndexFromCords((int)Math.Floor(i / GameSettings.GridSize), (int)Math.Floor(j / GameSettings.GridSize));
+            int index = GetIndexFromCords((int)Math.Floor(i / GAME_GRID_SIZE), (int)Math.Floor(j / GAME_GRID_SIZE));
             if (index < map[layer].Tiles.Length && index >= 0)
                 Tileset.DrawTile(spr, map[layer].Tiles[index], new Vector2(i - cameraPosition.X, j - cameraPosition.Y));
         }
 
         public void DrawCollisionTile(SpriteBatch spr, Vector2 cameraPosition, int layer, int i, int j, Texture2D blankDot)
         {
-            int index = GetIndexFromCords((int)Math.Floor(i / GameSettings.GridSize), (int)Math.Floor(j / GameSettings.GridSize));
+            int index = GetIndexFromCords((int)Math.Floor(i / GAME_GRID_SIZE), (int)Math.Floor(j / GAME_GRID_SIZE));
             if (index < CollisionLayer.CollisionTiles.Length && index >= 0)
             {
                 float r, g, b, a;
@@ -100,7 +97,7 @@ namespace Project_Vylia.vylia.Model
 
                 }
 
-                DrawHelper.drawRectangle(spr, blankDot, new Rectangle((int)(i - cameraPosition.X), (int)(j - cameraPosition.Y), (int)GameSettings.GridSize, (int)GameSettings.GridSize), new Color(r, g, b, a));
+                DrawHelper.drawRectangle(spr, blankDot, new Rectangle((int)(i - cameraPosition.X), (int)(j - cameraPosition.Y), (int)GAME_GRID_SIZE, (int)GAME_GRID_SIZE), new Color(r, g, b, a));
             }
         }
 
@@ -111,8 +108,8 @@ namespace Project_Vylia.vylia.Model
 
         public int GetIndexFromCordsP(float x, float y)
         {
-            int gy = (int)Math.Floor((y / GameSettings.GridSize));
-            int gx = (int)Math.Floor((x / GameSettings.GridSize));
+            int gy = (int)Math.Floor((y / GAME_GRID_SIZE));
+            int gx = (int)Math.Floor((x / GAME_GRID_SIZE));
 
             return (int)(gy * this.width + gx);
         }
@@ -124,7 +121,7 @@ namespace Project_Vylia.vylia.Model
 
         public Vector2 GetCordsFromIndexP(int index)
         {
-            return new Vector2((int)(index % this.width) * GameSettings.GridSize, (int)(Math.Floor((float)(index / this.width)) * GameSettings.GridSize));
+            return new Vector2((int)(index % this.width) * GAME_GRID_SIZE, (int)(Math.Floor((float)(index / this.width)) * GAME_GRID_SIZE));
         }
 
         public Tileset Tileset { get { return tileset; } set { tileset = value; } }

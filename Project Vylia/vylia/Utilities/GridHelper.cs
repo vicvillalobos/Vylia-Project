@@ -1,9 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.Utilities
 {
@@ -11,7 +8,7 @@ namespace Project_Vylia.vylia.Utilities
     {
         public static Vector2 PixelToGridPosition(Vector2 pixel)
         {
-            return new Vector2((float)Math.Floor(pixel.X / GameSettings.GridSize), (float)Math.Floor(pixel.Y / GameSettings.GridSize));
+            return new Vector2((float)Math.Floor(pixel.X / GAME_GRID_SIZE), (float)Math.Floor(pixel.Y / GAME_GRID_SIZE));
         }
 
         public static bool CollisionDetect(Rectangle rect1, Rectangle rect2)

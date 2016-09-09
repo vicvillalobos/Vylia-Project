@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using Project_Vylia.vylia.GameScreens;
+﻿using Microsoft.Xna.Framework;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.Model
 {
@@ -15,7 +10,7 @@ namespace Project_Vylia.vylia.Model
 
         public Camera(GameObject go, Tilemap map)
         {
-            dimensions = new Vector2(GameSettings.ScreenWidth,GameSettings.ScreenHeight);
+            dimensions = new Vector2(GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT);
             Target = go;
             setPositionByTarget(map);
         }
@@ -28,9 +23,9 @@ namespace Project_Vylia.vylia.Model
             {
                 this.position.X = 0;
 
-            } else if(this.target.Position.X >= (map.Width * GameSettings.GridSize) - (this.Dimensions.X / 2))
+            } else if(this.target.Position.X >= (map.Width * GAME_GRID_SIZE) - (this.Dimensions.X / 2))
             {
-                this.position.X = (map.Width * GameSettings.GridSize) - this.Dimensions.X;
+                this.position.X = (map.Width * GAME_GRID_SIZE) - this.Dimensions.X;
             } else
             {
                 this.position.X = this.target.CenterPosition.X - (this.Dimensions.X / 2);
@@ -42,9 +37,9 @@ namespace Project_Vylia.vylia.Model
                 this.position.Y = 0;
 
             }
-            else if (this.target.Position.Y >= (map.Height * GameSettings.GridSize) - (this.Dimensions.Y / 2))
+            else if (this.target.Position.Y >= (map.Height * GAME_GRID_SIZE) - (this.Dimensions.Y / 2))
             {
-                this.position.Y = (map.Height * GameSettings.GridSize) - this.Dimensions.Y;
+                this.position.Y = (map.Height * GAME_GRID_SIZE) - this.Dimensions.Y;
             }
             else
             {
@@ -99,7 +94,7 @@ namespace Project_Vylia.vylia.Model
                 }
                 else
                 {
-                    if (position.X + dimensions.X < map.Width * GameSettings.GridSize)
+                    if (position.X + dimensions.X < map.Width * GAME_GRID_SIZE)
                     position.X += chaseSpeed;
                 }
             }
@@ -120,7 +115,7 @@ namespace Project_Vylia.vylia.Model
                 }
                 else
                 {
-                    if(position.Y + dimensions.Y < map.Height * GameSettings.GridSize)
+                    if(position.Y + dimensions.Y < map.Height * GAME_GRID_SIZE)
                     position.Y += chaseSpeed;
                 }
             }

@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Project_Vylia.vylia.GameSettings;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Project_Vylia.vylia.GameScreens;
 using Project_Vylia.vylia.Utilities;
-using System.Collections;
 using MonoGame.Extended.BitmapFonts;
 using Microsoft.Xna.Framework.Input;
-using Project_Vylia.vylia.Model.Conversation;
 using Project_Vylia.vylia.Model.Entities;
 
 namespace Project_Vylia.vylia
@@ -55,7 +51,7 @@ namespace Project_Vylia.vylia
             errorList = new List<GameError>();
             try
             {
-                Dimensions = new Vector2(GameSettings.ScreenWidth, GameSettings.ScreenHeight);
+                Dimensions = new Vector2(GAME_SCREEN_WIDTH, GAME_SCREEN_HEIGHT);
                 currentScreen = new SplashScreen();
                 currentScreen = currentScreen.GetXmlSettings();
                 errorList.Add(new GameError("Hola mundo!"));
@@ -111,7 +107,7 @@ namespace Project_Vylia.vylia
         {
             if(frameInput.IsKeyDown(Keys.F3) && !pastInput.IsKeyDown(Keys.F3))
             {
-                GameSettings.DebugMode = !GameSettings.DebugMode;
+                GAME_DEBUG_MODE = !GAME_DEBUG_MODE;
             }
 
             currentScreen.GetInput(frameInput, pastInput);
@@ -126,13 +122,13 @@ namespace Project_Vylia.vylia
         {
             currentScreen.Draw(spriteBatch);
 
-            if (GameSettings.DebugMode)
+            if (GAME_DEBUG_MODE)
             {
                 int offset = 25;
                 int i = 1;
                 for (int x = errorList.Count - 1; x >= 0; x--)
                 {
-                    spriteBatch.DrawString(font, errorList[x].Message, new Vector2(10, GameSettings.ScreenHeight - (offset * i)), Color.Red * (float)Math.Pow(0.5f, (i - 1)));
+                    spriteBatch.DrawString(font, errorList[x].Message, new Vector2(10, GAME_SCREEN_HEIGHT- (offset * i)), Color.Red * (float)Math.Pow(0.5f, (i - 1)));
                     i++;
                 }
             }

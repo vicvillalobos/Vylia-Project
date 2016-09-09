@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.GameScreens
 {
@@ -106,7 +103,7 @@ namespace Project_Vylia.vylia.GameScreens
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(image, new Rectangle(GameSettings.ScreenWidth / 2 - 129,GameSettings.ScreenHeight / 2 - 133 / 2,258,133), Color.White * percentTransition);
+            spriteBatch.Draw(image, new Rectangle(GAME_SCREEN_WIDTH / 2 - 129,GAME_SCREEN_HEIGHT / 2 - 133 / 2,258,133), Color.White * percentTransition);
         }
 
     }

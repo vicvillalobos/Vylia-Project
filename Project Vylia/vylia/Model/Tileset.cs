@@ -1,10 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Project_Vylia.vylia.GameSettings;
 
 namespace Project_Vylia.vylia.Model
 {
@@ -60,7 +57,7 @@ namespace Project_Vylia.vylia.Model
             if (index < tileList.Length && index > 0)
             {
 
-                spr.Draw(this.texture, new Rectangle((int)pos.X, (int)pos.Y, (int)GameSettings.GridSize, (int)GameSettings.GridSize), new Rectangle((int)(tileList[index].TexturePosition.X * TileSize), (int)(tileList[index].TexturePosition.Y * TileSize), TileSize, TileSize), Color.White);
+                spr.Draw(this.texture, new Rectangle((int)pos.X, (int)pos.Y, (int)GAME_GRID_SIZE, (int)GAME_GRID_SIZE), new Rectangle((int)(tileList[index].TexturePosition.X * TileSize), (int)(tileList[index].TexturePosition.Y * TileSize), TileSize, TileSize), Color.White);
             }
         }
 
