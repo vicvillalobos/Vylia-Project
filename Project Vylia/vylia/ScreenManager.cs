@@ -23,10 +23,10 @@ namespace Project_Vylia.vylia
 
         public ContentManager Content { private set; get; }
 
-        public SpriteFont font;
+        public BitmapFont font;
         public BitmapFont debugFont;
         public BitmapFont conversationFont;
-
+        
         public Player player;
 
         public KeyboardState oldKeyboardState;
@@ -73,9 +73,9 @@ namespace Project_Vylia.vylia
         public void LoadContent(ContentManager Content)
         {
             this.Content = new ContentManager(Content.ServiceProvider,"Content");
-            this.font = Content.Load<SpriteFont>("Fonts/Kootenay");
-            this.debugFont = Content.Load<BitmapFont>("Fonts/pixelated");
-            this.conversationFont = Content.Load<BitmapFont>("Fonts/raleway_outline");
+            this.font = Content.Load<BitmapFont>("Fonts/golden_sun");
+            this.debugFont = Content.Load<BitmapFont>("Fonts/golden_sun");
+            this.conversationFont = Content.Load<BitmapFont>("Fonts/golden_sun");
             currentScreen.LoadContent();
             
         }

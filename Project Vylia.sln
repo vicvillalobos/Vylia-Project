@@ -5,16 +5,30 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Vylia", "Project Vylia\Project Vylia.csproj", "{40ADBD5B-6F73-4E9C-815E-34F15C38944D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VyliaServer", "VyliaServer\VyliaServer.csproj", "{C37017E2-E41F-4C85-84C1-A29F577E273F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40ADBD5B-6F73-4E9C-815E-34F15C38944D}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{40ADBD5B-6F73-4E9C-815E-34F15C38944D}.Debug|x86.ActiveCfg = Debug|x86
 		{40ADBD5B-6F73-4E9C-815E-34F15C38944D}.Debug|x86.Build.0 = Debug|x86
+		{40ADBD5B-6F73-4E9C-815E-34F15C38944D}.Release|Any CPU.ActiveCfg = Release|x86
 		{40ADBD5B-6F73-4E9C-815E-34F15C38944D}.Release|x86.ActiveCfg = Release|x86
 		{40ADBD5B-6F73-4E9C-815E-34F15C38944D}.Release|x86.Build.0 = Release|x86
+		{C37017E2-E41F-4C85-84C1-A29F577E273F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37017E2-E41F-4C85-84C1-A29F577E273F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37017E2-E41F-4C85-84C1-A29F577E273F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C37017E2-E41F-4C85-84C1-A29F577E273F}.Debug|x86.Build.0 = Debug|Any CPU
+		{C37017E2-E41F-4C85-84C1-A29F577E273F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37017E2-E41F-4C85-84C1-A29F577E273F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37017E2-E41F-4C85-84C1-A29F577E273F}.Release|x86.ActiveCfg = Release|Any CPU
+		{C37017E2-E41F-4C85-84C1-A29F577E273F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

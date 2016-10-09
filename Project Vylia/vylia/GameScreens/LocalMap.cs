@@ -100,7 +100,7 @@ namespace Project_Vylia.vylia.GameScreens
             base.Initialize();
             actualMap = new Tilemap(initialMap);
             camera = new Camera(player,actualMap);
-            cBox = new ConversationBox(new Rectangle(0, GAME_SCREEN_HEIGHT - 100, GAME_SCREEN_WIDTH, 100), 10, 15);
+            cBox = new ConversationBox(new Rectangle(0, GAME_SCREEN_HEIGHT - 80, GAME_SCREEN_WIDTH, 80), 10, 15);
             ScreenManager.Instance.addError(new GameError("["+secondsElapsed+"] Mapa inicial Cargado!"));
 
         }
@@ -314,6 +314,7 @@ namespace Project_Vylia.vylia.GameScreens
                 {
                     try
                     {
+                        a.TagCoords = new Vector2((int) a.Position.X - (int) camera.Position.X, (int)a.Position.Y - (int) camera.Position.Y);
                         a.Draw(spriteBatch, (int)a.Position.X - (int)camera.Position.X, (int)a.Position.Y - (int)camera.Position.Y, blankDot, charShadow);
                     }
                     catch (Exception ex) {
@@ -323,6 +324,7 @@ namespace Project_Vylia.vylia.GameScreens
             }
 
             // Jugador
+            player.TagCoords = new Vector2((int)player.Position.X - (int)camera.Position.X, (int)player.Position.Y - (int)camera.Position.Y);
             player.Draw(spriteBatch, (int)player.Position.X - (int)camera.Position.X, (int)player.Position.Y - (int)camera.Position.Y, blankDot, charShadow);
 
             // Entidades abajo del jugador
@@ -330,6 +332,7 @@ namespace Project_Vylia.vylia.GameScreens
             {
                 foreach (Actor a in actorsAbovePlayer)
                 {
+                    a.TagCoords = new Vector2((int)a.Position.X - (int)camera.Position.X, (int)a.Position.Y - (int)camera.Position.Y);
                     a.Draw(spriteBatch, (int)a.Position.X - (int)camera.Position.X, (int)a.Position.Y - (int)camera.Position.Y, blankDot, charShadow);
 
                 }
@@ -433,6 +436,19 @@ namespace Project_Vylia.vylia.GameScreens
                 }
 
                 // Interface
+
+
+
+                foreach (Actor a in actualMap.ActorList)
+                {
+
+                    spriteBatch.DrawString(ScreenManager.Instance.font, a.Name, new Vector2((a.TagCoords.X - (ScreenManager.Instance.font.MeasureString(a.Name) / 2).X) + 1, a.TagCoords.Y - 39), Color.Black);
+                    spriteBatch.DrawString(ScreenManager.Instance.font, a.Name, new Vector2((a.TagCoords.X - (ScreenManager.Instance.font.MeasureString(a.Name) / 2).X), a.TagCoords.Y - 40), Color.Cyan);
+
+                }
+                spriteBatch.DrawString(ScreenManager.Instance.font, player.Name, new Vector2((player.TagCoords.X - (ScreenManager.Instance.font.MeasureString(player.Name) / 2).X) + 1, player.TagCoords.Y - 39), Color.Black);
+                spriteBatch.DrawString(ScreenManager.Instance.font, player.Name, new Vector2((player.TagCoords.X - (ScreenManager.Instance.font.MeasureString(player.Name) / 2).X), player.TagCoords.Y - 40), Color.Cyan);
+
                 spriteBatch.DrawString(ScreenManager.Instance.conversationFont, "Dinero: $" + player.Money, new Vector2(10, 10), Color.Beige);
                 spriteBatch.DrawString(ScreenManager.Instance.conversationFont, "Dinero: $" + ScreenManager.Instance.player.Money, new Vector2(10, 20), Color.Beige);
             }

@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Project_Vylia.vylia.Model.Adventure
 {
-    class QuestItem : Item
+    abstract class QuestItem : Item
     {
-        public enum Type { Active, Material }
+        public override Item.Type getItemType()
+        {
+            return Type.Quest;
+        }
+
+        public abstract QuestItemType getQuestItemType();
+
+        public enum QuestItemType { Active, Material }
     }
 }

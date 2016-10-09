@@ -17,7 +17,7 @@ namespace Project_Vylia.vylia.Model.Entities
             baseSpeed = new Vector2(WALKSPEED, WALKSPEED);
             GridPosition = new Vector2(11,10);
             dimensions = new Vector2(32, 48);
-            textureURL = "sprites/bloodelf_male2";
+            textureURL = "sprites/m_elf_warrior_1";
             name = "Player";
             money = 2000;
             nonPlayerActor = false;

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Project_Vylia.Network;
 using Project_Vylia.vylia;
 using static Project_Vylia.vylia.GameSettings;
 
@@ -18,6 +19,7 @@ namespace Project_Vylia
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            AsynchronousClient.StartClient();
         }
 
         /// <summary>

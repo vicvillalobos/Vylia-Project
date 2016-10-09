@@ -9,9 +9,9 @@ namespace Project_Vylia.vylia
     class GameSettings
     {
         
-        public const int GAME_SCREEN_WIDTH = 800;
+        public const int GAME_SCREEN_WIDTH = 480;
         
-        public const int GAME_SCREEN_HEIGHT = 450;
+        public const int GAME_SCREEN_HEIGHT = 320;
         
         public const bool GAME_FULL_SCREEN = false;
 

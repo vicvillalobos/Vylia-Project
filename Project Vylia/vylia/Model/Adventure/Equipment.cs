@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Project_Vylia.vylia.Model.Adventure
 {
-    class Equipment : Item
+    abstract class Equipment : Item
     {
-        public enum Type { Head_Top, Head_Mid, Head_Low, Armor, Hands, Feet, Earring, Ring, Spirit }
+        public override Type getItemType()
+        {
+            return Type.Equipment;
+        }
+
+        public abstract EquipmentType getEquipmentType();
+
+        public enum EquipmentType { Head_Top, Head_Mid, Head_Low, Armor, Hands, Feet, Earring, Ring, Spirit }
     }
 }

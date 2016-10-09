@@ -50,18 +50,6 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/blankDot.png
 
-#begin Sprites/bloodelf_male2.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/bloodelf_male2.png
-
 #begin Tilesets/Castle2.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -103,18 +91,6 @@
 /processorParam:TextureFormat=Color
 /build:Fonts/pixelated_0.png
 
-#begin Sprites/f_actor1.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=43,133,133,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/f_actor1.png
-
 #begin Fonts/raleway.fnt
 /importer:BitmapFontImporter
 /processor:BitmapFontProcessor
@@ -149,18 +125,6 @@
 /processorParam:TextureFormat=Color
 /build:Fonts/raleway_outline_0.png
 
-#begin Sprites/male_brawler_1.bmp
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=43,133,133,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/male_brawler_1.bmp
-
 #begin Sprites/char_shadow.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -173,19 +137,24 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/char_shadow.png
 
-#begin Sprites/m_mage_1.png
+#begin Fonts\golden_sun_0.png
 /importer:TextureImporter
 /processor:TextureProcessor
-/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyColor=255,0,255,255
 /processorParam:ColorKeyEnabled=True
 /processorParam:GenerateMipmaps=False
 /processorParam:PremultiplyAlpha=True
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/m_mage_1.png
+/build:Fonts\golden_sun_0.png
 
-#begin Sprites/f_actor2.png
+#begin Fonts\golden_sun.fnt
+/importer:BitmapFontImporter
+/processor:BitmapFontProcessor
+/build:Fonts\golden_sun.fnt
+
+#begin Sprites/f_beast_dancer_1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=43,133,133,255
@@ -195,5 +164,101 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/f_actor2.png
+/build:Sprites/f_beast_dancer_1.png
+
+#begin Sprites/f_human_swordsman_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/f_human_swordsman_1.png
+
+#begin Sprites/f_human_warrior_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/f_human_warrior_1.png
+
+#begin Sprites/m_beast_assassin_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/m_beast_assassin_1.png
+
+#begin Sprites/m_brawler_1.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/m_brawler_1.bmp
+
+#begin Sprites/m_elf_knight_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/m_elf_knight_1.png
+
+#begin Sprites/m_elf_warrior_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/m_elf_warrior_1.png
+
+#begin Sprites/m_human_mage_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/m_human_mage_1.png
+
+#begin Sprites/f_human_spy_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=43,133,133,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/f_human_spy_1.png
 

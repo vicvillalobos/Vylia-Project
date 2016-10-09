@@ -97,18 +97,12 @@ C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\ra
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\SplashScreen\Logo.xnb
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\SplashScreen\vslogo.xnb
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\blankDot.xnb
-C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\bloodelf_male2.xnb
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\char_shadow.xnb
-C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_actor1.xnb
-C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_actor2.xnb
-C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\male_brawler_1.xnb
-C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\m_mage_1.xnb
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Tilesets\Castle2.xnb
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Tilesets\magecity_0.xnb
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\SplashScreen\Logo.png
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\SplashScreen\vslogo.png
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\blankDot.png
-C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\bloodelf_male2.png
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\Kootenay.xnb
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Project Vylia.exe
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Project Vylia.pdb
@@ -133,3 +127,15 @@ C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.Direct2D
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.XInput.xml
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.RawInput.xml
 C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\SharpDX.Direct3D9.xml
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\golden_sun.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Fonts\golden_sun_0.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_beast_dancer_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_beast_spy_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_human_swordsman_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_human_warrior_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\m_beast_assassin_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\m_brawler_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\m_elf_knight_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\m_elf_warrior_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\m_human_mage_1.xnb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\Project Vylia\Content\Sprites\f_human_spy_1.xnb

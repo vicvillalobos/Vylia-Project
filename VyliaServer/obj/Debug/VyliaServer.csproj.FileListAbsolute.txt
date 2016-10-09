@@ -1,0 +1,6 @@
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\VyliaServer\bin\Debug\VyliaServer.exe.config
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\VyliaServer\bin\Debug\VyliaServer.exe
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\VyliaServer\bin\Debug\VyliaServer.pdb
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\VyliaServer\obj\Debug\VyliaServer.csprojResolveAssemblyReference.cache
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\VyliaServer\obj\Debug\VyliaServer.exe
+C:\Users\HP Victor\Documents\GitHub\Vylia-Project\VyliaServer\obj\Debug\VyliaServer.pdb

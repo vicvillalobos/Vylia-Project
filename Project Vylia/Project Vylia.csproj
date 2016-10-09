@@ -39,13 +39,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Game1.cs" />
+    <Compile Include="Network\AsynchronousClient.cs" />
+    <Compile Include="Network\StateObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="vylia\GameScreen.cs" />
     <Compile Include="vylia\GameScreens\LocalMap.cs" />
     <Compile Include="vylia\GameScreens\SplashScreen.cs" />
     <Compile Include="vylia\GameSettings.cs" />
-    <Compile Include="vylia\ItemManager.cs" />
     <Compile Include="vylia\Model\Actor.cs" />
     <Compile Include="vylia\Model\Adventure\ActorClass.cs" />
     <Compile Include="vylia\Model\Adventure\ActorRace.cs" />
@@ -53,6 +54,9 @@
     <Compile Include="vylia\Model\Adventure\Consumable.cs" />
     <Compile Include="vylia\Model\Adventure\Equipment.cs" />
     <Compile Include="vylia\Model\Adventure\Item.cs" />
+    <Compile Include="vylia\Model\Adventure\Items\Weapons\Sword.cs" />
+    <Compile Include="vylia\Model\Adventure\Items\Weapons\Swords\ShortSword.cs" />
+    <Compile Include="vylia\Model\Adventure\Items\Weapons\Swords\WoodenSword.cs" />
     <Compile Include="vylia\Model\Adventure\QuestItem.cs" />
     <Compile Include="vylia\Model\Adventure\Weapon.cs" />
     <Compile Include="vylia\Model\Camera.cs" />
@@ -78,7 +82,7 @@
     <Compile Include="vylia\Utilities\DrawHelper.cs" />
     <Compile Include="vylia\Utilities\GameError.cs" />
     <Compile Include="vylia\Utilities\GridHelper.cs" />
-    <Compile Include="vylia\Utilities\ItemDatabase.cs" />
+    <Compile Include="vylia\Utilities\Out.cs" />
     <Compile Include="vylia\Utilities\TimeHelper.cs" />
     <Compile Include="vylia\XMLManager.cs" />
   </ItemGroup>
@@ -103,9 +107,6 @@
     <Content Include="Content\Sprites\blankDot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Sprites\bloodelf_male2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\Tilesets\Castle2.png" />
     <Content Include="Content\Tilesets\magecity_0.png" />
     <Content Include="vylia\Load\Entities\TestNPC01.xml">
@@ -124,9 +125,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Icon.ico" />
-    <Content Include="vylia\Load\Inventory\ItemDatabase.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="vylia\Load\Tilemaps\TestMap1.xml">
       <SubType>Designer</SubType>
     </Content>

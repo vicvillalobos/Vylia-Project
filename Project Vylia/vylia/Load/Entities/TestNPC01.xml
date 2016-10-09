@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Actor>
-  <Name>NPC Test 1</Name>
+  <Name>Celine</Name>
   <Dimensions>
     <X>32</X>
     <Y>48</Y>
@@ -14,7 +14,7 @@
     <X>1</X>
     <Y>1</Y>
   </BaseSpeed>
-  <TextureURL>sprites/f_actor1</TextureURL>
+  <TextureURL>sprites/f_human_warrior_1</TextureURL>
   
   <ActorConversation type="Root">
     <ConversationList>

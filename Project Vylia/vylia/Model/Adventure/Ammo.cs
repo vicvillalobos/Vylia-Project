@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Project_Vylia.vylia.Model.Adventure
 {
-    class Ammo : Item
+    abstract class Ammo : Item
     {
+        public override Type getItemType()
+        {
+            return Type.Ammo;
+        }
+
+        public abstract AmmoType getAmmoType();
+
         public enum AmmoType { Arrow, Bolt, Stone, Mana_Crystal }
     }
 }

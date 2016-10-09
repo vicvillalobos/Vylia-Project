@@ -5,6 +5,8 @@ using Project_Vylia.vylia.Utilities;
 using System;
 using System.Collections.Generic;
 using static Project_Vylia.vylia.GameSettings;
+using MonoGame.Extended.BitmapFonts;
+using Project_Vylia.Network;
 
 namespace Project_Vylia.vylia.Model
 {
@@ -26,6 +28,11 @@ namespace Project_Vylia.vylia.Model
         public List<KeyValuePair<string, string>> ActorStringVariables { get { return actorStringVariables; } set { actorStringVariables = value; } }
         public List<KeyValuePair<string, double>> ActorNumericVariables { get { return actorNumericVariables; } set { actorNumericVariables = value; } }
         public List<KeyValuePair<string, bool>> ActorSwitches { get { return actorSwitches; } set { actorSwitches = value; } }
+        
+        public Vector2 TagCoords
+        {
+            get; set;
+        }
 
         protected GameSprite[] sprites;
         protected String textureURL;
@@ -237,6 +244,10 @@ namespace Project_Vylia.vylia.Model
         public void Draw(SpriteBatch spr, int x, int y,Texture2D blankDot, Texture2D shadow)
         {
             base.Draw(spr);
+
+            spr.DrawString(ScreenManager.Instance.font, this.Name, new Vector2((x - (ScreenManager.Instance.font.MeasureString(this.Name) / 2).X) + 1, y - 39), Color.Black);
+            spr.DrawString(ScreenManager.Instance.font, this.Name, new Vector2((x - (ScreenManager.Instance.font.MeasureString(this.Name) / 2).X), y - 40), Color.Cyan);
+
             if (sprites[facing].TextureLoaded)
             {
                 spr.Draw(shadow, new Rectangle(x - (int)(dimensions.X / 2), (int)(y + (int)(dimensions.Y / 2) - 14), (int) Dimensions.X,16), new Color(255, 255, 255, 0.4f));
@@ -260,6 +271,11 @@ namespace Project_Vylia.vylia.Model
             // no check for collision.
             speed.X = m.X * baseSpeed.X;
             speed.Y = m.Y * baseSpeed.Y;
+
+            if (speed.X != 0 && speed.Y != 0)
+            {
+                AsynchronousClient.Send("Moving speed: "+speed.X+","+speed.Y+"<EOF>");
+            }
         }
 
         public int ReverseDirection()
